@@ -1,5 +1,6 @@
 
 import os, sys
+import tracer
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_perf_test.settings')
 import django
@@ -41,7 +42,7 @@ def f():
     #pypyjit.dont_trace_here(0, False, query.QuerySet.filter.im_func.__code__)
     #pypyjit.dont_trace_here(0, False, Counter.update.im_func.__code__)
     #pypyjit.dont_trace_here(0, False, ABCMeta.__instancecheck__.im_func.__code__)
-f()
+#f()
 
 def main():
     import time
